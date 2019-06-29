@@ -1,0 +1,48 @@
+Arguments: 
+  /Users/meck/.nvm/versions/node/v12.3.1/bin/node /Users/meck/.nvm/versions/node/v12.3.1/bin/yarn add @remax/cli @remax/componentns @remax/core
+
+PATH: 
+  /Users/meck/.rvm/gems/ruby-2.6.3/bin:/Users/meck/.rvm/gems/ruby-2.6.3@global/bin:/Users/meck/.rvm/rubies/ruby-2.6.3/bin:/usr/local/opt/postgresql@10/bin:/Users/meck/.nvm/versions/node/v12.3.1/bin:/Users/meck/.just-installs/bin:/usr/local/sbin:/usr/local/bin:/Users/meck/bin:/Users/meck/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/Users/meck/.rvm/gems/ruby-2.6.3/bin:/Users/meck/.rvm/gems/ruby-2.6.3@global/bin:/Users/meck/.rvm/rubies/ruby-2.6.3/bin:/usr/local/opt/postgresql@10/bin:/Users/meck/.nvm/versions/node/v12.3.1/bin:/Users/meck/.just-installs/bin:/Users/meck/bin:/Users/meck/.cargo/bin:/Users/meck/Workspace/depot_tools:/Users/meck/Library/Android/sdk/tools:/Users/meck/Library/Android/sdk/platform-tools:/usr/local/opt/fzf/bin:/Users/meck/.cli:/Users/meck/.pulumi/bin:/Users/meck/.rvm/bin:/Users/meck/Workspace/depot_tools:/Users/meck/Library/Android/sdk/tools:/Users/meck/Library/Android/sdk/platform-tools:/Users/meck/.cli:/Users/meck/.pulumi/bin:/Users/meck/.rvm/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.3.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@remax%2fcomponentns: Not found
+      at Request.params.callback [as _callback] (/Users/meck/.nvm/versions/node/v12.3.1/lib/node_modules/yarn/lib/cli.js:66091:18)
+      at Request.self.callback (/Users/meck/.nvm/versions/node/v12.3.1/lib/node_modules/yarn/lib/cli.js:129590:22)
+      at Request.emit (events.js:200:13)
+      at Request.<anonymous> (/Users/meck/.nvm/versions/node/v12.3.1/lib/node_modules/yarn/lib/cli.js:130562:10)
+      at Request.emit (events.js:200:13)
+      at IncomingMessage.<anonymous> (/Users/meck/.nvm/versions/node/v12.3.1/lib/node_modules/yarn/lib/cli.js:130484:12)
+      at Object.onceWrapper (events.js:288:20)
+      at IncomingMessage.emit (events.js:205:15)
+      at endReadableNT (_stream_readable.js:1137:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:9)
+
+npm manifest: 
+  {
+    "name": "todo-demo",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Wei Zhu <yesmeck@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

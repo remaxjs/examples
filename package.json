@@ -1,0 +1,21 @@
+{
+  "name": "remax-todo-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Wei Zhu <yesmeck@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax dev",
+    "build": "remax build"
+  },
+  "dependencies": {
+    "@remax/cli": "^1.0.1-alpha.0",
+    "@remax/components": "^1.0.1-alpha.0",
+    "@remax/core": "^1.0.1-alpha.0",
+    "clsx": "^1.0.4",
+    "react": "^16.8.6"
+  }
+}
