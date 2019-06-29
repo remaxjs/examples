@@ -7,13 +7,19 @@ import './index.css';
 
 const app = getApp();
 
-export default () => {
+export default React.forwardRef((_, ref) => {
   const user = useUserInfo();
   const [todos, setTodos] = React.useState([]);
 
   React.useEffect(() => {
     setTodos(app.todos);
   }, [app.todos]);
+
+  React.useImperativeHandle(ref, () => ({
+    componentDidShow() {
+      setTodos(app.todos);
+    },
+  }));
 
   const handleAdd = () => {
     my.navigateTo({ url: '../new/index' });
@@ -53,4 +59,4 @@ export default () => {
       </View>
     </View>
   );
-};
+});

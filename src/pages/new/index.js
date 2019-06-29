@@ -23,7 +23,7 @@ export default () => {
   return (
     <View className="page-add-todo">
       <View className="add-todo">
-        <Input className="add-todo-input" placeholder="What needs to be done?" onChange={setText} />
+        <Input className="add-todo-input" placeholder="What needs to be done?" onInput={e => setText(e.detail.value)} />
       </View>
 
       <View className="todo-footer">
