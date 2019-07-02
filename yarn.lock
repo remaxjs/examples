@@ -733,11 +733,6 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/lodash@^4.14.135":
-  version "4.14.135"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.135.tgz#d2607c35dd68f70c2b35ba020c667493dedd8447"
-  integrity sha512-Ed+tSZ9qM1oYpi5kzdsBuOzcAIn1wDW+e8TFJ50IMJMlSopGdJgKAbhHzN6h1E1OfjlGOr2JepzEWtg9NIfoNg==
-
 "@types/node@*", "@types/node@^12.0.10":
   version "12.0.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
@@ -2451,9 +2446,9 @@ regjsparser@^0.6.0:
     jsesc "~0.5.0"
 
 remax-cli@^1.0.1-alpha.2:
-  version "1.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.2.tgz#947958e60eb09fbe2c27267e7505fe5a30a89e0c"
-  integrity sha512-EKinISZjefyucgcpJB7kRXHAwrt89ah33tPwEMrgDCTC7fZx3lwnaF6emrqukkpVwm45GQ7kwHvujADZVZj6PA==
+  version "1.0.1-alpha.5"
+  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.5.tgz#12c4fa6bc415de2a1f1af98f2571ad6f42e28b72"
+  integrity sha512-QwbobzSJUAlWeigROfThPQk1MDq+eAyltjT8QZ/P2/3IE+iNfo8hTyvW7xrbjq9QbaNiJr+JU20Fz0O3gXzZYg==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/helper-module-imports" "^7.0.0"
@@ -2463,13 +2458,11 @@ remax-cli@^1.0.1-alpha.2:
     "@babel/preset-typescript" "^7.3.3"
     "@babel/types" "^7.4.4"
     "@betit/rollup-plugin-rename-extensions" "^0.0.4"
-    "@types/lodash" "^4.14.135"
     commander "^2.19.0"
     ejs "^2.6.1"
     less "^3.9.0"
     lodash "^4.17.11"
     postcss-px2units "^0.2.0"
-    react "^16.8.6"
     rollup "^1.16.0"
     rollup-plugin-babel "^4.3.2"
     rollup-plugin-clear "^2.0.7"
@@ -2479,9 +2472,9 @@ remax-cli@^1.0.1-alpha.2:
     rollup-plugin-progress "^1.1.1"
 
 remax@^1.0.1-alpha.2:
-  version "1.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.2.tgz#5cda3de544b6d2e962487056fd55e412a1d1cfad"
-  integrity sha512-+VW4Tn+bDamQIvUkmEbmkczObLOysruSaMpIPJ4bOCapYQldb33BXyv9OHF/ClG4uFWdxp7CYCrmBtxVfPtGog==
+  version "1.0.1-alpha.5"
+  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.5.tgz#1beea1f2429fd11de1e81f8431a2794e31e73ca9"
+  integrity sha512-QDE2ZqQGtqKFNUs8/de1fD0cdx/7ksUIxzSqPwMW8AgYWp3/Wuofe/gIIS02ip8INckRuAyJlol3LqllLX1+TA==
   dependencies:
     react-reconciler "0.20.4"
     scheduler "0.13.6"
