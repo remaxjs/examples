@@ -12,9 +12,8 @@
     "build": "remax build"
   },
   "dependencies": {
-    "@remax/cli": "^1.0.1-alpha.1",
-    "@remax/components": "^1.0.1-alpha.1",
-    "@remax/core": "^1.0.1-alpha.1",
+    "remax": "^1.0.1-alpha.2",
+    "remax-cli": "^1.0.1-alpha.2",
     "clsx": "^1.0.4",
     "react": "^16.8.6"
   }

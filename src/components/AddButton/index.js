@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Text } from '@remax/components';
+import { Button, Text } from 'remax';
 import './index.css';
 
 const AddButton = ({ onClick, text }) => {

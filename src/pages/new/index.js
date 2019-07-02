@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Input } from '@remax/components';
+import { View, Input } from 'remax';
 import AddButton from '../../components/AddButton';
 import './index.css';
 

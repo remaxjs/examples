@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Image, CheckboxGroup, Checkbox, Label, Text } from '@remax/components';
+import { View, Image, CheckboxGroup, Checkbox, Label, Text } from 'remax';
 import clsx from 'clsx';
 import useUserInfo from '../../hooks/useUserInfo';
 import AddButton from '../../components/AddButton';
