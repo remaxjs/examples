@@ -9,12 +9,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "remax dev",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
     "build": "remax build"
   },
   "dependencies": {
     "clsx": "^1.0.4",
     "react": "^16.8.6",
-    "remax": "^1.0.1-alpha.2",
-    "remax-cli": "^1.0.1-alpha.2"
+    "remax": "^1.0.1-alpha.6",
+    "remax-cli": "^1.0.1-alpha.6",
+    "rimraf": "^2.6.3"
   }
 }

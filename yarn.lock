@@ -728,6 +728,14 @@
     magic-string "^0.25.2"
     rollup-pluginutils "^2.6.0"
 
+"@remax/scheduler@^0.13.6":
+  version "0.13.6"
+  resolved "https://registry.yarnpkg.com/@remax/scheduler/-/scheduler-0.13.6.tgz#85d5efb5c6e537bba69306b5edb9071fe9b14edc"
+  integrity sha512-9U5G8c1cuaujyiP1ZBGKYg3cCTgODcD1uCWqXDUSd9aaeTGKfdi9w/yRSVTEm04ave8Dl2Kf27jMIyEznygmIw==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
 "@types/estree@0.0.39":
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
@@ -2445,10 +2453,10 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
-remax-cli@^1.0.1-alpha.2:
-  version "1.0.1-alpha.5"
-  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.5.tgz#12c4fa6bc415de2a1f1af98f2571ad6f42e28b72"
-  integrity sha512-QwbobzSJUAlWeigROfThPQk1MDq+eAyltjT8QZ/P2/3IE+iNfo8hTyvW7xrbjq9QbaNiJr+JU20Fz0O3gXzZYg==
+remax-cli@^1.0.1-alpha.6:
+  version "1.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.6.tgz#219f5f065115fab0be095171f67c651b3d666001"
+  integrity sha512-NPZ/S6V+x+zDlneQ0VWdW9gb0rJl1elBzgjl/4yd7GapAa5a84CvHoM7/1lyOsHtMC1CjYbzM+QylSON9x1mWg==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/helper-module-imports" "^7.0.0"
@@ -2471,13 +2479,13 @@ remax-cli@^1.0.1-alpha.2:
     rollup-plugin-postcss "^2.0.3"
     rollup-plugin-progress "^1.1.1"
 
-remax@^1.0.1-alpha.2:
-  version "1.0.1-alpha.5"
-  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.5.tgz#1beea1f2429fd11de1e81f8431a2794e31e73ca9"
-  integrity sha512-QDE2ZqQGtqKFNUs8/de1fD0cdx/7ksUIxzSqPwMW8AgYWp3/Wuofe/gIIS02ip8INckRuAyJlol3LqllLX1+TA==
+remax@^1.0.1-alpha.6:
+  version "1.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.6.tgz#04ed3afefeb350405d6ae3387b96a1396feaba7f"
+  integrity sha512-9g9eqr76ie5TkrH/4ITze7fCgXEnW8iB4Fvigq5Qq4fp6ldMg4xuIGmhctw4lQMHMyHLXtdKSKUWZQPjCx/x1g==
   dependencies:
+    "@remax/scheduler" "^0.13.6"
     react-reconciler "0.20.4"
-    scheduler "0.13.6"
 
 request@^2.83.0:
   version "2.88.0"
@@ -2532,7 +2540,7 @@ rgba-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/rgba-regex/-/rgba-regex-1.0.0.tgz#43374e2e2ca0968b0ef1523460b7d730ff22eeb3"
   integrity sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
 
-rimraf@^2.6.2:
+rimraf@^2.6.2, rimraf@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
@@ -2634,7 +2642,7 @@ sax@~1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-scheduler@0.13.6, scheduler@^0.13.6:
+scheduler@^0.13.6:
   version "0.13.6"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
   integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
