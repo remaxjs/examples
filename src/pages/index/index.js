@@ -36,12 +36,14 @@ export default React.forwardRef((_, ref) => {
 
   return (
     <View className="page-todos">
-      {user && (
-        <View className="user">
-          <Image className="avatar" src={user.avatar} background-size="cover" />
-          <View className="nickname">{user.nickName + "'s"} Todo List</View>
-        </View>
-      )}
+      <View className="user">
+        <Image
+          className="avatar"
+          src={user ? user.avatar : 'https://gw.alipayobjects.com/mdn/rms/afts/img/A*GTddR6XXRHgAAAAAAAAAAABkARQnAQ'}
+          background-size="cover"
+        />
+        <View className="nickname">{user ? user.nickName + "'s" : 'My'} Todo List</View>
+      </View>
 
       <View className="todo-items">
         <CheckboxGroup className="todo-items-group" onChange={handleComplete}>
