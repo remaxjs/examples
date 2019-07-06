@@ -2453,10 +2453,10 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
-remax-cli@^1.0.1-alpha.6:
-  version "1.0.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.6.tgz#219f5f065115fab0be095171f67c651b3d666001"
-  integrity sha512-NPZ/S6V+x+zDlneQ0VWdW9gb0rJl1elBzgjl/4yd7GapAa5a84CvHoM7/1lyOsHtMC1CjYbzM+QylSON9x1mWg==
+remax-cli@^1.0.1-alpha.8:
+  version "1.0.1-alpha.8"
+  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.8.tgz#9ed99b745ed416bc3229a8f74bc7a4128c17c5d2"
+  integrity sha512-uWJjBLm0g1Pz3HGxGoJNRi+djpmThJmQNReReswAQeeuEATyaSYs9y4PO7srxEBCdW9kTCbQy8w8GDItpjXq+g==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/helper-module-imports" "^7.0.0"
@@ -2479,10 +2479,10 @@ remax-cli@^1.0.1-alpha.6:
     rollup-plugin-postcss "^2.0.3"
     rollup-plugin-progress "^1.1.1"
 
-remax@^1.0.1-alpha.6:
-  version "1.0.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.6.tgz#04ed3afefeb350405d6ae3387b96a1396feaba7f"
-  integrity sha512-9g9eqr76ie5TkrH/4ITze7fCgXEnW8iB4Fvigq5Qq4fp6ldMg4xuIGmhctw4lQMHMyHLXtdKSKUWZQPjCx/x1g==
+remax@^1.0.1-alpha.8:
+  version "1.0.1-alpha.8"
+  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.8.tgz#38348759e3c23436127c06e9b01578d6d4ae957b"
+  integrity sha512-Jx+HVmOA7ntGUjjenSesOe163IqTdXhCFgeLIX5ZtPZ0V3KAligFOfCMP5k1hTOpzCQeXjLtmCnnd1KzZrhIng==
   dependencies:
     "@remax/scheduler" "^0.13.6"
     react-reconciler "0.20.4"
