@@ -16,8 +16,8 @@
   "dependencies": {
     "clsx": "^1.0.4",
     "react": "^16.8.6",
-    "remax": "^1.0.1-alpha.9",
-    "remax-cli": "^1.0.1-alpha.9",
+    "remax": "^1.0.1-alpha.10",
+    "remax-cli": "^1.0.1-alpha.10",
     "rimraf": "^2.6.3"
   }
 }

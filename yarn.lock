@@ -1775,11 +1775,6 @@ lodash.camelcase@^4.3.0:
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
 
-lodash.debounce@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
-
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -2458,10 +2453,10 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
-remax-cli@^1.0.1-alpha.9:
-  version "1.0.1-alpha.9"
-  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.9.tgz#3ba5ff0558ca170a7570ff9460991248be676b43"
-  integrity sha512-41I4vl1uuuscQNF7cp5VTZfnnJIAs5uXlKWiyTL4fxaWGoGAP1Ei7T4tDB/Opah6ja9RXPyPF7Kldi+O6Q9w9A==
+remax-cli@^1.0.1-alpha.10:
+  version "1.0.1-alpha.10"
+  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.10.tgz#a339def52263dac94fad312c32c2adb1a3c295f5"
+  integrity sha512-aWHvNixfbT3hCSE6KBWDpAc+YbcmLpo3vtJ0rduhImxTaZy4T/zwZHoFwp8ZWQUfukWgEEnBEf3gcohde1FPPw==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/helper-module-imports" "^7.0.0"
@@ -2485,13 +2480,12 @@ remax-cli@^1.0.1-alpha.9:
     rollup-plugin-postcss "^2.0.3"
     rollup-plugin-progress "^1.1.1"
 
-remax@^1.0.1-alpha.9:
-  version "1.0.1-alpha.9"
-  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.9.tgz#b5edd42d98baeae94daa357d1d202610361b6d42"
-  integrity sha512-Oa5cuQy9Ol8O83K0XaNFrwtbvLhBZqjA5hlHlJY7kQrb4laAU+qd0o5bV4bQpThy9v47Y1cUQIC4/0cgsoGnAw==
+remax@^1.0.1-alpha.10:
+  version "1.0.1-alpha.10"
+  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.10.tgz#6e7fd59818fc271e799a50335a2dcabd562f52d7"
+  integrity sha512-ZawA8zt2TXnbp8w0pVQkoklmm9IjDOr3lTUwB3R2UBLzXwRK9wxAzNqyvenhI9PabeX3QpkZLn/sup73G7srhQ==
   dependencies:
     "@remax/scheduler" "^0.13.6"
-    lodash.debounce "^4.0.8"
     react-reconciler "0.20.4"
 
 request@^2.83.0:
