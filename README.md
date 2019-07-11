@@ -6,7 +6,7 @@
 <img src="https://user-images.githubusercontent.com/465125/60393937-5d353300-9b4f-11e9-9f55-12a64454231b.PNG" alt="Screenshot" width="350"/>
 
 
- ## 运行
+ ## 本地运行
 
  ```bash
  $ yarn install
