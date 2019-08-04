@@ -1,0 +1,17 @@
+.login-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
+
+}
+
+.wechat.login-button {
+  padding: 0;
+  line-height: 1;
+}
+
+.wechat.login-button::after {
+  content: none;
+}

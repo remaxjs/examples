@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Input } from 'remax';
+import { View, Input, navigateBack } from 'remax';
 import AddButton from '../../components/AddButton';
 import './index.css';
 
@@ -13,17 +13,22 @@ export default () => {
       {
         id: Date.now(),
         text,
-        compeleted: false,
-      },
+        compeleted: false
+      }
     ]);
 
-    my.navigateBack();
+    navigateBack();
   };
 
   return (
     <View className="page-add-todo">
       <View className="add-todo">
-        <Input className="add-todo-input" placeholder="What needs to be done?" onInput={e => setText(e.detail.value)} />
+        <Input
+          className="add-todo-input"
+          placeholder="What needs to be done?"
+          onInput={e => setText(e.detail.value)}
+          value={text}
+        />
       </View>
 
       <View className="todo-footer">

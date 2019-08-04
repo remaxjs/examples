@@ -1,10 +1,15 @@
 import * as React from 'react';
-import { Button, Text } from 'remax';
+import { Button, Text, Platform } from 'remax';
 import './index.css';
+import clsx from 'clsx';
 
 const AddButton = ({ onClick, text }) => {
   return (
-    <Button className="add-button" hover-class="none" onClick={onClick}>
+    <Button
+      className={clsx('add-button', { wechat: Platform.isWechat })}
+      hover-class="none"
+      onClick={onClick}
+    >
       <Text className="add-icon">+</Text>
       <Text>{text}</Text>
     </Button>

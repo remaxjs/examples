@@ -14,6 +14,12 @@
   align-items: center;
 }
 
+.login-tip {
+  display: inline-block;
+  font-size: 20rpx;
+  color: #999;
+}
+
 .avatar {
   width: 130rpx;
   height: 130rpx;
@@ -56,6 +62,11 @@
   /* white-space:nowrap; */
 
   transition: border 0.2s;
+
+}
+
+.wechat.todo-item {
+  line-height: 25rpx;
 }
 
 .todo-item:last-child {
@@ -117,7 +128,7 @@
 
 .todo-footer {
   flex-shrink: 0;
-  padding: 50rpx 0 100rpx;
+  padding: 20rpx 0 100rpx;
   font-size: 48rpx;
   font-weight: 200;
   text-align: center;
