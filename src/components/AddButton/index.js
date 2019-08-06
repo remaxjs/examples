@@ -7,7 +7,7 @@ const AddButton = ({ onClick, text }) => {
   return (
     <Button
       className={clsx('add-button', { wechat: Platform.isWechat })}
-      hover-class="none"
+      hoverClass="none"
       onClick={onClick}
     >
       <Text className="add-icon">+</Text>

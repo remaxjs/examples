@@ -10,7 +10,8 @@
 
 ```bash
 $ yarn install
-$ yarn build -t alipay|wechat -w
+$ yarn build -t alipay -w
+$ yarn build -t wechat -w
 ```
 
 使用开发者工具打开 `dist` 目录。

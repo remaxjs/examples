@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { Button, Platform } from 'remax';
-import clsx from 'clsx';
 import './index.css';
 
 const WechatLoginButton = ({ login, children }) => {
   return (
     <Button
       className="login-button wechat"
-      hover-class="none"
+      hoverClass="none"
       openType="getUserInfo"
       onGetUserInfo={login}
     >
@@ -18,7 +17,7 @@ const WechatLoginButton = ({ login, children }) => {
 
 const AlipayButton = ({ login, children }) => {
   return (
-    <Button className="login-button" hover-class="none" onClick={login}>
+    <Button className="login-button" hoverClass="none" onClick={login}>
       {children}
     </Button>
   );
