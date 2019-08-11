@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useShow } from 'remax';
 import {
   View,
   Image,
@@ -6,20 +7,16 @@ import {
   Checkbox,
   Label,
   Text,
-  navigateTo,
-  Platform,
-  useShow
-} from 'remax';
+  navigateTo
+} from 'remax/wechat';
 import clsx from 'clsx';
 import useUserInfo from '../../hooks/useUserInfo';
-import AddButton from '../../components/AddButton';
-import LoginButton from '../../components/LoginButton';
+import AddButton from '@/components/AddButton';
+import LoginButton from '@/components/LoginButton';
+import logo from '@/assets/logo.png';
 import './index.css';
 
 const app = getApp();
-
-const logo =
-  'https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*1NHAQYduQiQAAAAAAAAAAABkARQnAQ';
 
 export default () => {
   const [user, login] = useUserInfo();
@@ -43,6 +40,7 @@ export default () => {
       ...todo,
       completed: !!checkedTodos.find(id => todo.id == id)
     }));
+
     setTodos(app.todos);
   };
 
@@ -68,8 +66,7 @@ export default () => {
             <Label
               key={todo.id}
               className={clsx('todo-item', {
-                checked: todo.completed,
-                wechat: Platform.isWechat
+                checked: todo.completed
               })}
             >
               <Checkbox

@@ -10,10 +10,12 @@
 
 ## 本地运行
 
+进入对应小程序目录，如 alipay
+
 ```bash
+& cd alipay
 $ yarn install
-$ yarn dev:alipay
-$ yarn dev:wechat
+$ yarn dev
 ```
 
 使用开发者工具打开 `dist` 目录。

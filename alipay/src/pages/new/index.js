@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Input, navigateBack } from 'remax';
-import AddButton from '../../components/AddButton';
+import AddButton from '@/components/AddButton';
 import './index.css';
 
 const app = getApp();

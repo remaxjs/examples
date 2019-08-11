@@ -59,14 +59,8 @@
   border-radius: 100rpx;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* white-space:nowrap; */
-
   transition: border 0.2s;
 
-}
-
-.wechat.todo-item {
-  line-height: 25rpx;
 }
 
 .todo-item:last-child {
