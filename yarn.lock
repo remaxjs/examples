@@ -2848,10 +2848,10 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
-remax-cli@1.0.1-alpha.30:
-  version "1.0.1-alpha.30"
-  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-alpha.30.tgz#b386a51694056db0ff40d5f6232f9aa323cce2da"
-  integrity sha512-OYTgNcphCoYXY74m63R6lKfi5DH+NzuQ3y6BGQvRPfomxgEY2q0N5zkWVyca89TYjQFZIRKcH6WhfUZ5tpZOng==
+remax-cli@1.0.1-dev.0:
+  version "1.0.1-dev.0"
+  resolved "https://registry.yarnpkg.com/remax-cli/-/remax-cli-1.0.1-dev.0.tgz#9f9c2ea5371b118c527fbd66f0ce3a291fa28ec4"
+  integrity sha512-3kECKjsbgBxVCAQVsOk7ptYZDF5YxzZ+U/lZMmx1eW4d+fMxidySdBpRO276j9FLU2oa6GLS3bf9RJReYIMaZA==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/helper-module-imports" "^7.0.0"
@@ -2879,10 +2879,10 @@ remax-cli@1.0.1-alpha.30:
     scheduler "0.13.6"
     yargs "^13.2.4"
 
-remax@1.0.1-alpha.30:
-  version "1.0.1-alpha.30"
-  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-alpha.30.tgz#bbecc674e9f8ed8d3ba069e321a351872e8d400d"
-  integrity sha512-gs0tNtzMBXZVnfwKjtLm6X4SrqcAfDZq3j9qTp66cTvzE3ao6GwOz8igxf6MHFtUU4EcXYP5BfCxbjHpCmIY/A==
+remax@1.0.1-dev.0:
+  version "1.0.1-dev.0"
+  resolved "https://registry.yarnpkg.com/remax/-/remax-1.0.1-dev.0.tgz#1ac55012651c86aaaffd6898a4ce906a211abde7"
+  integrity sha512-2dmwVebG6wRWDpfSaaDyqsiKPMYOjNENW88KmnwjVkgHSIIE8DbPQpupVA6oTXpFNtPZXpBzgaPSR5q8PpW8OA==
   dependencies:
     antd-mobile "^2.2.14"
     react-reconciler "0.20.4"

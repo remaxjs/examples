@@ -9,16 +9,16 @@
   "license": "MIT",
   "scripts": {
     "dev:alipay": "remax build -t alipay -w",
-    "dev:wechat": "remax build -t alipay -w",
+    "dev:wechat": "remax build -t wechat -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "remax build"
+    "build": "NODE_ENV=production remax build"
   },
   "dependencies": {
     "clsx": "^1.0.4",
     "react": "^16.8.6",
-    "remax": "1.0.1-alpha.30",
-    "remax-cli": "1.0.1-alpha.30",
+    "remax": "1.0.1-dev.0",
+    "remax-cli": "1.0.1-dev.0",
     "rimraf": "^2.6.3"
   }
 }

@@ -7,7 +7,8 @@ import {
   Label,
   Text,
   navigateTo,
-  Platform
+  Platform,
+  useShow
 } from 'remax';
 import clsx from 'clsx';
 import useUserInfo from '../../hooks/useUserInfo';
@@ -17,11 +18,10 @@ import './index.css';
 
 const app = getApp();
 
-const logo = Platform.isAlipay
-  ? 'https://s2.ax1x.com/2019/08/05/ecUQJI.jpg'
-  : 'https://s2.ax1x.com/2019/08/05/ecUMFA.jpg';
+const logo =
+  'https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*1NHAQYduQiQAAAAAAAAAAABkARQnAQ';
 
-export default ({ lifecycle }) => {
+export default () => {
   const [user, login] = useUserInfo();
   const [todos, setTodos] = React.useState([]);
 
@@ -29,7 +29,7 @@ export default ({ lifecycle }) => {
     setTodos(app.todos);
   }, [app.todos]);
 
-  lifecycle.useShow(() => {
+  useShow(() => {
     setTodos(app.todos);
   }, []);
 
