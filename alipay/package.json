@@ -8,7 +8,7 @@
   "author": "Wei Zhu <yesmeck@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "remax build -t alipay -w",
+    "dev": "npm run clean && remax build -t alipay -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production remax build -t alipay"
