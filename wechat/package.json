@@ -8,7 +8,7 @@
   "author": "Wei Zhu <yesmeck@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "npm run clean && remax build -t wechat -w",
+    "dev": "remax build -t wechat -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production remax build -t wechat"
