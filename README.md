@@ -1,6 +1,6 @@
 # Remax Todo Demo
 
-<img src="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*WDPmSo4iuoMAAAAAAAAAAABkARQnAQg" alt="QRCode" width="350"/>
+<img src="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*WDPmSo4iuoMAAAAAAAAAAABkARQnAQ" alt="QRCode" width="350"/>
 
 <img src="https://user-images.githubusercontent.com/465125/60393937-5d353300-9b4f-11e9-9f55-12a64454231b.PNG" alt="Alipay" width="350"/>
 
