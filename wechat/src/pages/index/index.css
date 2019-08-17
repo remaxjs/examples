@@ -102,6 +102,10 @@
   display: none;
 }
 
+.todo-item-text {
+  line-height: 68px;
+}
+
 .checked .todo-item-text {
   text-decoration: line-through;
   color: #1AA0B8;
