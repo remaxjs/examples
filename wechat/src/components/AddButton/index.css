@@ -1,18 +1,9 @@
 .add-button {
-  line-height: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  padding: 0;
-  font-size: inherit;
+  display: inline-block;
   background: none;
   color: #FFF;
   border: none;
   width: 300rpx;
-}
-
-.add-button::after {
-  content: none;
 }
 
 .add-icon {

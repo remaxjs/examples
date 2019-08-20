@@ -4,3 +4,4 @@ yarn-error.log
 src/pages/.umi/
 project.config.json
 .DS_Store
+yarn.lock

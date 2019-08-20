@@ -4,8 +4,7 @@
   border: none;
   width: auto;
   height: auto;
-  padding: 0;
-  line-height: 1;
+
 }
 
 .login-button::after {

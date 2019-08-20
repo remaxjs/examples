@@ -6,12 +6,3 @@
   height: auto;
 
 }
-
-.wechat.login-button {
-  padding: 0;
-  line-height: 1;
-}
-
-.wechat.login-button::after {
-  content: none;
-}

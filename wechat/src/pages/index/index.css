@@ -52,14 +52,13 @@
   position: relative;
   margin-bottom: 50rpx;
   padding-left:80rpx;
-  line-height: 25rpx;
+  line-height: 70rpx;
   height: 80rpx;
   box-sizing: border-box;
   border: 2px solid rgb(14, 255, 214);
   border-radius: 100rpx;
   overflow: hidden;
   text-overflow: ellipsis;
-
   transition: border 0.2s;
 
 }
