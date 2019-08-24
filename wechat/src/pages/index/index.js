@@ -51,7 +51,6 @@ export default () => {
           <Image
             className="avatar"
             src={user ? user.avatar : logo}
-            background-size="cover"
           />
         </LoginButton>
         <View className="nickname">

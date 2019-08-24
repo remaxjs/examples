@@ -4,6 +4,11 @@
   color: #FFF;
   border: none;
   width: 300rpx;
+
+}
+
+.add-button::after {
+  content: unset;
 }
 
 .add-icon {
