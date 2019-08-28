@@ -8,6 +8,10 @@
 
 <img src="https://user-images.githubusercontent.com/6788752/62478318-5e582080-b7dd-11e9-93ad-9993ce65c934.png" alt="Wechat" width="350"/>
 
+<img src="http://p3.pstatp.com/origin/2b28700007277f5dc75a8" alt="QRCode" width="350" />
+
+<img src="http://p3.pstatp.com/origin/2b28f0000d214a1bdc8db" alt="Toutiao" width="350">
+
 ## 本地运行
 
 进入对应小程序目录，如 alipay
