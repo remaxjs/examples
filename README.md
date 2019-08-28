@@ -15,7 +15,7 @@
 
 <img src="https://user-images.githubusercontent.com/6788752/62823927-a86c4800-bbc9-11e9-9ad6-b1099577c768.png" alt="QRCode" width="350"/>
 
-<img src="https://user-images.githubusercontent.com/6788752/62478318-5e582080-b7dd-11e9-93ad-9993ce65c934.png" alt="Wechat" width="350"/>
+<img src="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*NPtMTaUQrZIAAAAAAAAAAABkARQnAQ" alt="Wechat" width="350"/>
 
 ## 头条
 
