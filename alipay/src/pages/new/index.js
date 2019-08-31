@@ -1,21 +1,23 @@
 import * as React from 'react';
 import { View, Input, navigateBack } from 'remax/alipay';
 import AddButton from '@/components/AddButton';
+import TodoContainer from '@/containers/Todo';
 import './index.css';
 
-const app = getApp();
-
 export default () => {
+  const todo = React.useContext(TodoContainer.Context);
   const [text, setText] = React.useState('');
 
   const handleAdd = () => {
-    app.todos = app.todos.concat([
+    const items = todo.items.concat([
       {
         id: Date.now(),
         text,
-        compeleted: false
-      }
+        compeleted: false,
+      },
     ]);
+
+    todo.setItems(items);
 
     navigateBack();
   };

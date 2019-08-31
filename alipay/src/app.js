@@ -1,11 +1,9 @@
+import * as React from 'react';
+import TodoContainer from './containers/Todo';
 import './app.css';
 
-class App {
-  todos = [
-    { id: 1, text: 'Learning Javascript', completed: true },
-    { id: 2, text: 'Learning ES2016', completed: true },
-    { id: 3, text: 'Learning Remax', completed: false },
-  ];
-}
+const App = ({ children }) => {
+  return <TodoContainer>{children}</TodoContainer>;
+};
 
 export default App;

@@ -5,3 +5,4 @@ src/pages/.umi/
 project.config.json
 .DS_Store
 yarn.lock
+.tea/
