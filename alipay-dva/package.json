@@ -17,8 +17,8 @@
     "remax-dva": "^1.0.0",
     "clsx": "^1.0.4",
     "react": "^16.8.6",
-    "remax": "next",
-    "remax-cli": "next",
+    "remax": "^1.1.0",
+    "remax-cli": "^1.1.0",
     "rimraf": "^2.6.3"
   }
 }

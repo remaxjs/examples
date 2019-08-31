@@ -1,21 +1,23 @@
 import * as React from 'react';
 import { View, Input, navigateBack } from 'remax/toutiao';
 import AddButton from '@/components/AddButton';
+import { TodoContext } from '@/app';
 import './index.css';
 
-const app = getApp();
-
 export default () => {
+  const todo = React.useContext(TodoContext);
   const [text, setText] = React.useState('');
 
   const handleAdd = () => {
-    app.todos = app.todos.concat([
+    const items = todo.items.concat([
       {
         id: Date.now(),
         text,
-        compeleted: false
-      }
+        compeleted: false,
+      },
     ]);
+
+    todo.setItems(items);
 
     navigateBack();
   };

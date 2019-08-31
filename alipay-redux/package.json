@@ -17,8 +17,8 @@
     "clsx": "^1.0.4",
     "react": "^16.8.6",
     "redux": "^4.0.4",
-    "remax": "next",
-    "remax-cli": "next",
+    "remax": "^1.1.0",
+    "remax-cli": "^1.1.0",
     "remax-redux": "^7.1.1",
     "rimraf": "^2.6.3"
   }

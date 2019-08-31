@@ -13,35 +13,27 @@ import clsx from 'clsx';
 import useUserInfo from '../../hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
 import LoginButton from '@/components/LoginButton';
+import { TodoContext } from '@/app';
 import logo from '@/assets/logo.png';
 import './index.css';
 
-const app = getApp();
-
 export default () => {
   const [user, login] = useUserInfo();
-  const [todos, setTodos] = React.useState([]);
+  const todo = React.useContext(TodoContext);
 
-  React.useEffect(() => {
-    setTodos(app.todos);
-  }, [app.todos]);
-
-  useShow(() => {
-    setTodos(app.todos);
-  }, []);
 
   const handleAdd = () => {
     navigateTo({ url: '../new/index' });
   };
 
   const handleComplete = e => {
-    const checkedTodos = e.detail.value;
-    app.todos = app.todos.map(todo => ({
-      ...todo,
-      completed: !!checkedTodos.find(id => todo.id == id)
+    const checkedItems = e.detail.value;
+    const items = todo.items.map(item => ({
+      ...item,
+      completed: !!checkedItems.find(id => item.id == id),
     }));
 
-    setTodos(app.todos);
+    todo.setItems(items);
   };
 
   return (
@@ -61,19 +53,19 @@ export default () => {
 
       <View className="todo-items">
         <CheckboxGroup className="todo-items-group" onChange={handleComplete}>
-          {todos.map(todo => (
+          {todo.items.map(item => (
             <Label
-              key={todo.id}
+              key={item.id}
               className={clsx('todo-item', {
-                checked: todo.completed
+                checked: item.completed
               })}
             >
               <Checkbox
                 className="todo-item-checkbox"
-                value={todo.id}
-                checked={todo.completed}
+                value={item.id}
+                checked={item.completed}
               />
-              <Text className="todo-item-text">{todo.text}</Text>
+              <Text className="todo-item-text">{item.text}</Text>
             </Label>
           ))}
         </CheckboxGroup>
