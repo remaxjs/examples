@@ -1,24 +1,15 @@
 import * as React from 'react';
+import { connect } from 'remax-redux';
 import { View, Input, navigateBack } from 'remax/alipay';
+import { addTodo } from '@/actions';
 import AddButton from '@/components/AddButton';
-import TodoContainer from '@/containers/Todo';
 import './index.css';
 
-export default () => {
-  const todo = React.useContext(TodoContainer.Context);
+const NewPage = ({ dispatch }) => {
   const [text, setText] = React.useState('');
 
   const handleAdd = () => {
-    const items = todo.items.concat([
-      {
-        id: Date.now(),
-        text,
-        compeleted: false,
-      },
-    ]);
-
-    todo.setItems(items);
-
+    dispatch(addTodo(text));
     navigateBack();
   };
 
@@ -39,3 +30,5 @@ export default () => {
     </View>
   );
 };
+
+export default connect()(NewPage);

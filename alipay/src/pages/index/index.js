@@ -1,32 +1,23 @@
 import * as React from 'react';
-import { useShow } from 'remax';
+import { connect } from 'remax-redux';
 import { View, Image, CheckboxGroup, Checkbox, Label, Text, navigateTo } from 'remax/alipay';
 import clsx from 'clsx';
-import useUserInfo from '../../hooks/useUserInfo';
+import useUserInfo from '@/hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
 import LoginButton from '@/components/LoginButton';
-import TodoContainer from '@/containers/Todo';
+import { toggleTodo } from '@/actions';
 import logo from '@/assets/logo.png';
 import './index.css';
 
-const app = getApp();
-
-export default () => {
+const IndexPage = ({ todos, dispatch }) => {
   const [user, login] = useUserInfo();
-  const todo = React.useContext(TodoContainer.Context);
 
   const handleAdd = () => {
     navigateTo({ url: '../new/index' });
   };
 
-  const handleComplete = e => {
-    const checkedItems = e.detail.value;
-    const items = todo.items.map(item => ({
-      ...item,
-      completed: !!checkedItems.find(id => item.id == id),
-    }));
-
-    todo.setItems(items);
+  const handleToggle = todo => e => {
+    dispatch(toggleTodo(todo.id));
   };
 
   return (
@@ -42,16 +33,21 @@ export default () => {
       </View>
 
       <View className="todo-items">
-        <CheckboxGroup className="todo-items-group" onChange={handleComplete}>
-          {todo.items.map(item => (
+        <CheckboxGroup className="todo-items-group">
+          {todos.map(todo => (
             <Label
-              key={item.id}
+              key={todo.id}
               className={clsx('todo-item', {
-                checked: item.completed,
+                checked: todo.completed,
               })}
             >
-              <Checkbox className="todo-item-checkbox" value={item.id} checked={item.completed} />
-              <Text className="todo-item-text">{item.text}</Text>
+              <Checkbox
+                className="todo-item-checkbox"
+                value={todo.id}
+                checked={todo.completed}
+                onChange={handleToggle(todo)}
+              />
+              <Text className="todo-item-text">{todo.text}</Text>
             </Label>
           ))}
         </CheckboxGroup>
@@ -63,3 +59,9 @@ export default () => {
     </View>
   );
 };
+
+const mapStateToProps = state => ({
+  todos: state.todos,
+});
+
+export default connect(mapStateToProps)(IndexPage);

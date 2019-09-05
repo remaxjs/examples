@@ -1,9 +1,13 @@
 import * as React from 'react';
-import TodoContainer from './containers/Todo';
+import { createStore } from 'redux';
+import { Provider } from 'remax-redux';
+import rootReducer from './reducers';
 import './app.css';
 
+const store = createStore(rootReducer);
+
 const App = ({ children }) => {
-  return <TodoContainer>{children}</TodoContainer>;
+  return <Provider store={store}>{children}</Provider>;
 };
 
 export default App;
