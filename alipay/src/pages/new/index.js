@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { connect } from 'remax-redux';
+import { connect } from '@remax/dva';
 import { View, Input, navigateBack } from 'remax/alipay';
-import { addTodo } from '@/actions';
 import AddButton from '@/components/AddButton';
 import './index.css';
 
@@ -9,7 +8,10 @@ const NewPage = ({ dispatch }) => {
   const [text, setText] = React.useState('');
 
   const handleAdd = () => {
-    dispatch(addTodo(text));
+    dispatch({
+      type: 'todo/add',
+      text,
+    });
     navigateBack();
   };
 

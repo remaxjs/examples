@@ -1,23 +1,25 @@
 import * as React from 'react';
-import { connect } from 'remax-redux';
+import { connect } from '@remax/dva';
 import { View, Image, CheckboxGroup, Checkbox, Label, Text, navigateTo } from 'remax/alipay';
 import clsx from 'clsx';
 import useUserInfo from '@/hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
 import LoginButton from '@/components/LoginButton';
-import { toggleTodo } from '@/actions';
 import logo from '@/assets/logo.png';
 import './index.css';
 
 const IndexPage = ({ todos, dispatch }) => {
   const [user, login] = useUserInfo();
 
-  const handleAdd = () => {
+  const handleAdd = async () => {
     navigateTo({ url: '../new/index' });
   };
 
   const handleToggle = todo => e => {
-    dispatch(toggleTodo(todo.id));
+    dispatch({
+      type: 'todo/toggle',
+      id: todo.id,
+    });
   };
 
   return (
@@ -61,7 +63,7 @@ const IndexPage = ({ todos, dispatch }) => {
 };
 
 const mapStateToProps = state => ({
-  todos: state.todos,
+  todos: state.todo,
 });
 
 export default connect(mapStateToProps)(IndexPage);

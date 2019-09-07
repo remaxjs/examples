@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { createStore } from 'redux';
-import { Provider } from 'remax-redux';
-import rootReducer from './reducers';
+import dva, { connect } from '@remax/dva';
+import todo from './models/todo';
 import './app.css';
 
-const store = createStore(rootReducer);
+const app = dva();
+app.model(todo);
+const Provider = app.start();
 
 const App = ({ children }) => {
-  return <Provider store={store}>{children}</Provider>;
+  return <Provider>{children}</Provider>;
 };
 
 export default App;
