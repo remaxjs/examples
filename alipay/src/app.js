@@ -5,10 +5,7 @@ import './app.css';
 
 const app = dva();
 app.model(todo);
-const Provider = app.start();
 
-const App = ({ children }) => {
-  return <Provider>{children}</Provider>;
-};
+const App = app.start(({ children }) => children);
 
 export default App;
