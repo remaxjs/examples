@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { connect } from '@remax/dva';
+import { connect } from 'remax-dva';
 import { View, Input, navigateBack } from 'remax/alipay';
 import AddButton from '@/components/AddButton';
 import './index.css';

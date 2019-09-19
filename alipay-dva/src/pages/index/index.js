@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { connect } from '@remax/dva';
+import { connect } from 'remax-dva';
 import { View, Image, CheckboxGroup, Checkbox, Label, Text, navigateTo } from 'remax/alipay';
 import clsx from 'clsx';
 import useUserInfo from '@/hooks/useUserInfo';
