@@ -11,11 +11,18 @@
     "dev": "remax build -t alipay -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production remax build -t alipay"
+    "build": "NODE_ENV=production remax build -t alipay",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^3.2.0",
     "clsx": "^1.0.4",
+    "jest": "^24.9.0",
     "react": "^16.8.6",
+    "react-test-renderer": "^16.9.0",
     "remax": "^1.1.0",
     "remax-cli": "^1.1.0",
     "rimraf": "^2.6.3"

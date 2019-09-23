@@ -1,0 +1,2 @@
+global.getApp = () => {};
+global.my = {};

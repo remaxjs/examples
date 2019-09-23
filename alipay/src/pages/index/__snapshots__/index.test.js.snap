@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<view
+  class="page-todos"
+>
+  <view
+    class="user"
+  >
+    <button
+      class="login-button"
+      hoverClass="none"
+      onTap={[Function]}
+    >
+      <image
+        background-size="cover"
+        class="avatar"
+        src="image-mock-path"
+      />
+    </button>
+    <view
+      class="nickname"
+    >
+      My
+       Todo List
+      <text
+        class="login-tip"
+      >
+        (Tap to login ↑)
+      </text>
+    </view>
+  </view>
+  <view
+    class="todo-items"
+  >
+    <checkbox-group
+      class="todo-items-group"
+      onChange={[Function]}
+    >
+      <label
+        class="todo-item checked"
+      >
+        <checkbox
+          checked={true}
+          class="todo-item-checkbox"
+          value={1}
+        />
+        <text
+          class="todo-item-text"
+        >
+          Learning Javascript
+        </text>
+      </label>
+      <label
+        class="todo-item checked"
+      >
+        <checkbox
+          checked={true}
+          class="todo-item-checkbox"
+          value={2}
+        />
+        <text
+          class="todo-item-text"
+        >
+          Learning ES2016
+        </text>
+      </label>
+      <label
+        class="todo-item"
+      >
+        <checkbox
+          checked={false}
+          class="todo-item-checkbox"
+          value={3}
+        />
+        <text
+          class="todo-item-text"
+        >
+          Learning Remax
+        </text>
+      </label>
+    </checkbox-group>
+  </view>
+  <view
+    class="todo-footer"
+  >
+    <button
+      class="add-button"
+      hoverClass="none"
+      onTap={[Function]}
+    >
+      <text
+        class="add-icon"
+      >
+        +
+      </text>
+      <text>
+        Add Todo
+      </text>
+    </button>
+  </view>
+</view>
+`;
