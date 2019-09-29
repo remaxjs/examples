@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "clsx": "^1.0.4",
+    "mini-antui": "^0.4.34",
     "react": "^16.8.6",
     "remax": "^1.1.0",
     "remax-cli": "^1.1.0",
