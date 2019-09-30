@@ -6,7 +6,9 @@ export default () => {
   return (
     <View className="page-todos">
       <Badge>
-        <View slot="inner">Hello</View>
+        <View slot="inner">
+          <Text>Hello</Text>
+        </View>
       </Badge>
     </View>
   );
