@@ -16,8 +16,11 @@
   "dependencies": {
     "clsx": "^1.0.4",
     "react": "^16.8.6",
-    "remax": "^1.1.0",
-    "remax-cli": "^1.1.0",
+    "remax": "^1.2.0-beta.0",
+    "remax-cli": "^1.2.0-beta.0",
     "rimraf": "^2.6.3"
+  },
+  "devDependencies": {
+    "babel-plugin-loop-optimizer": "^1.4.1"
   }
 }
