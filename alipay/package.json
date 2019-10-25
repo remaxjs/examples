@@ -11,10 +11,11 @@
     "dev": "remax build -t alipay -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production remax build -t alipay"
+    "build": "cross-env NODE_ENV=production remax build -t alipay"
   },
   "dependencies": {
     "clsx": "^1.0.4",
+    "cross-env": "^6.0.3",
     "react": "^16.8.6",
     "remax": "^1.1.0",
     "remax-cli": "^1.1.0",
