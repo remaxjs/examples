@@ -21,8 +21,7 @@ export default () => {
   const [user, login] = useUserInfo();
   const todo = React.useContext(TodoContext);
 
-
-  const handleAdd = () => {
+  const handleAdd = event => {
     navigateTo({ url: '../new/index' });
   };
 
@@ -30,20 +29,36 @@ export default () => {
     const checkedItems = e.detail.value;
     const items = todo.items.map(item => ({
       ...item,
-      completed: !!checkedItems.find(id => item.id == id),
+      completed: !!checkedItems.find(id => item.id == id)
     }));
 
     todo.setItems(items);
   };
 
+  const handleClick = id => e => {
+    console.log(id, e);
+  };
+
   return (
     <View className="page-todos">
+      <View onClick={handleClick(6)}>
+        view 6
+        <View onClick={handleClick(5)}>
+          view 5
+          <View onClick={handleClick(4)}>
+            view 4
+            <View catchClick={handleClick(3)}>
+              view 3
+              <View onClick={handleClick(2)}>
+                view 2<View onClick={handleClick(1)}>view 1</View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
       <View className="user">
         <LoginButton login={login}>
-          <Image
-            className="avatar"
-            src={user ? user.avatar : logo}
-          />
+          <Image className="avatar" src={user ? user.avatar : logo} />
         </LoginButton>
         <View className="nickname">
           {user ? user.nickName + "'s" : 'My'} Todo List
