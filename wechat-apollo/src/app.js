@@ -16,7 +16,7 @@ class Response {
 
 const client = new ApolloClient({ uri: 'https://etmdb.com/graphql', fetch: (url, options) => {
   return new Promise((resolve, reject) => {
-    my.request({
+    wx.request({
       url,
       method: options.method,
       headers: options.headers,
