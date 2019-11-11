@@ -1,0 +1,44 @@
+.container {
+  padding: 10PX;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+}
+
+.list-item {
+  padding: 5PX;
+  width: 70PX;
+  height: 70PX;
+  text-align: center;
+  font-size: 12PX;
+  margin: 10PX;
+}
+
+.list-item image {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70PX;
+  padding: 12PX;
+  background-color: #fff;
+  border: 1PX solid #eee;
+  border-radius: 4PX;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10PX;
+}
+
+.footer {
+  width: 100%;
+  margin: 20PX;
+  text-align: center;
+}
+
+.footer text {
+  font-size: 12PX;
+  color: #808080;
+  line-height: 1.5;
+  display: block;
+}
