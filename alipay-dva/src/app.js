@@ -1,5 +1,5 @@
 import * as React from 'react';
-import dva, { connect } from 'remax-dva';
+import dva from 'remax-dva';
 import todo from './models/todo';
 import './app.css';
 
