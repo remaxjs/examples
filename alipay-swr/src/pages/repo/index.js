@@ -16,9 +16,9 @@ export default ({ location }) => {
             <ListItem>forks: {data.forks_count}</ListItem>
             <ListItem>stars: {data.stargazers_count}</ListItem>
             <ListItem last>watchers: {data.watchers}</ListItem>
-            <ListItem>
-              <Navigator openType="navigateBack">Back</Navigator>
-            </ListItem>
+            <Navigator openType="navigateBack">
+              <ListItem>Back</ListItem>
+            </Navigator>
           </>
         ) : (
           <ListItem>Loading...</ListItem>

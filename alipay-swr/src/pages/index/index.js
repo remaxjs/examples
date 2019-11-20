@@ -13,9 +13,11 @@ export default () => {
         <ListItem className="am-list-sticky">Remax Projects</ListItem>
         {data ? (
           data.map((project, index) => (
-            <ListItem index={index} key={project.id} last={index === data.length - 1}>
-              <Navigator url={`/pages/repo/index?repo=${project.name}`}>{project.name}</Navigator>
-            </ListItem>
+            <Navigator key={project.id} url={`/pages/repo/index?repo=${project.name}`}>
+              <ListItem index={index} last={index === data.length - 1}>
+                {project.name}
+              </ListItem>
+            </Navigator>
           ))
         ) : (
           <ListItem>Loading...</ListItem>
