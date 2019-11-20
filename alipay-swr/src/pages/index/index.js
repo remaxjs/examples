@@ -8,7 +8,7 @@ export default () => {
   const { data } = useSWR('/users/remaxjs/repos');
 
   return (
-    <View>
+    <View style={{ width: '100%' }}>
       <List>
         <ListItem className="am-list-sticky">Remax Projects</ListItem>
         {data ? (

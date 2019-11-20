@@ -8,7 +8,7 @@ export default ({ location }) => {
   const { data } = useSWR('/repos/remaxjs/' + location.query.repo);
 
   return (
-    <View>
+    <View style={{ width: '100%' }}>
       <List>
         <ListItem className="am-list-sticky">remaxjs/{location.query.repo}</ListItem>
         {data ? (
