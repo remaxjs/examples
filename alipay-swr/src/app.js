@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { request } from 'remax/alipay';
-import useSWR, { SWRConfig } from 'swr';
+import { SWRConfig } from 'swr';
 import './app.css';
 
 const App = ({ children }) => {
