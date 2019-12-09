@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { observer } from 'mobx-remax';
+import { observer } from 'mobx-react';
 import { View, Input, navigateBack } from 'remax/wechat';
 import AddButton from '@/components/AddButton';
 import useStores from '@/hooks/useStores';

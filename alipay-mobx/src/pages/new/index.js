@@ -1,15 +1,16 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { observer } from 'mobx-react';
 import { View, Input, navigateBack } from 'remax/alipay';
-import { addTodo } from '@/actions';
 import AddButton from '@/components/AddButton';
+import useStores from '@/hooks/useStores';
 import './index.css';
 
-const NewPage = ({ dispatch }) => {
+const NewPage = () => {
   const [text, setText] = React.useState('');
+  const { todoStore } = useStores();
 
   const handleAdd = () => {
-    dispatch(addTodo(text));
+    todoStore.addTodo(text);
     navigateBack();
   };
 
@@ -23,7 +24,6 @@ const NewPage = ({ dispatch }) => {
           value={text}
         />
       </View>
-
       <View className="todo-footer">
         <AddButton text="Add Todo" onClick={handleAdd} />
       </View>
@@ -31,4 +31,4 @@ const NewPage = ({ dispatch }) => {
   );
 };
 
-export default connect()(NewPage);
+export default observer(NewPage);

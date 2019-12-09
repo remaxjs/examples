@@ -7,7 +7,7 @@ import {
   Label,
   Text,
   navigateTo
-} from 'remax/wechat';
+} from 'remax/alipay';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
 import useUserInfo from '../../hooks/useUserInfo';
@@ -45,7 +45,6 @@ const IndexPage = () => {
         <CheckboxGroup className="todo-items-group">
           {todoStore.todos.map(todo => (
             <Label
-              onClick={handleToggle(todo)}
               key={todo.id}
               className={clsx('todo-item', {
                 checked: todo.completed
@@ -55,6 +54,7 @@ const IndexPage = () => {
                 className="todo-item-checkbox"
                 value={todo.id}
                 checked={todo.completed}
+                onChange={handleToggle(todo)}
               />
               <Text className="todo-item-text">{todo.text}</Text>
             </Label>

@@ -1,6 +1,14 @@
 import * as React from 'react';
 import { useShow } from 'remax';
-import { View, Image, CheckboxGroup, Checkbox, Label, Text, navigateTo } from 'remax/alipay';
+import {
+  View,
+  Image,
+  CheckboxGroup,
+  Checkbox,
+  Label,
+  Text,
+  navigateTo
+} from 'remax/alipay';
 import clsx from 'clsx';
 import useUserInfo from '@/hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
@@ -21,7 +29,7 @@ export default () => {
     const checkedItems = e.detail.value;
     const items = todo.items.map(item => ({
       ...item,
-      completed: !!checkedItems.find(id => item.id == id),
+      completed: !!checkedItems.find(id => item.id == id)
     }));
 
     todo.setItems(items);
@@ -31,7 +39,11 @@ export default () => {
     <View className="page-todos">
       <View className="user">
         <LoginButton login={login}>
-          <Image className="avatar" src={user ? user.avatar : logo} background-size="cover" />
+          <Image
+            className="avatar"
+            src={user ? user.avatar : logo}
+            background-size="cover"
+          />
         </LoginButton>
         <View className="nickname">
           {user ? user.nickName + "'s" : 'My'} Todo List
@@ -45,10 +57,14 @@ export default () => {
             <Label
               key={item.id}
               className={clsx('todo-item', {
-                checked: item.completed,
+                checked: item.completed
               })}
             >
-              <Checkbox className="todo-item-checkbox" value={item.id} checked={item.completed} />
+              <Checkbox
+                className="todo-item-checkbox"
+                value={item.id}
+                checked={item.completed}
+              />
               <Text className="todo-item-text">{item.text}</Text>
             </Label>
           ))}

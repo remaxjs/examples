@@ -1,6 +1,14 @@
 import * as React from 'react';
-import { connect } from 'remax-redux';
-import { View, Image, CheckboxGroup, Checkbox, Label, Text, navigateTo } from 'remax/alipay';
+import { connect } from 'react-redux';
+import {
+  View,
+  Image,
+  CheckboxGroup,
+  Checkbox,
+  Label,
+  Text,
+  navigateTo
+} from 'remax/alipay';
 import clsx from 'clsx';
 import useUserInfo from '@/hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
@@ -24,7 +32,11 @@ const IndexPage = ({ todos, dispatch }) => {
     <View className="page-todos">
       <View className="user">
         <LoginButton login={login}>
-          <Image className="avatar" src={user ? user.avatar : logo} background-size="cover" />
+          <Image
+            className="avatar"
+            src={user ? user.avatar : logo}
+            background-size="cover"
+          />
         </LoginButton>
         <View className="nickname">
           {user ? user.nickName + "'s" : 'My'} Todo List
@@ -38,7 +50,7 @@ const IndexPage = ({ todos, dispatch }) => {
             <Label
               key={todo.id}
               className={clsx('todo-item', {
-                checked: todo.completed,
+                checked: todo.completed
               })}
             >
               <Checkbox
@@ -61,7 +73,7 @@ const IndexPage = ({ todos, dispatch }) => {
 };
 
 const mapStateToProps = state => ({
-  todos: state.todos,
+  todos: state.todos
 });
 
 export default connect(mapStateToProps)(IndexPage);
