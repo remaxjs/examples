@@ -11,19 +11,20 @@
     "dev": "remax build -t wechat -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production remax build -t wechat"
+    "build": "cross-env NODE_ENV=production remax build -t wechat"
   },
   "dependencies": {
-    "@types/react": "^16.9.1",
+    "@types/react": "^16.9.23",
     "clsx": "^1.0.4",
     "react": "^16.8.6",
-    "redux": "^4.0.4",
-    "remax": "^1.2.2",
-    "remax-cli": "^1.2.2",
+    "redux": "^4.0.5",
+    "remax": "^1.15.0",
+    "remax-cli": "^1.15.0",
     "remax-redux": "^7.1.1",
     "rimraf": "^3.0.0"
   },
   "devDependencies": {
-    "chokidar": "^3.2.2"
+    "chokidar": "^3.2.2",
+    "cross-env": "^7.0.2"
   }
 }
