@@ -282,9 +282,9 @@ export default () => {
       <Canvas
         id="area"
         disableScroll
-        onTouchStart="touchStart"
-        onTouchMove="touchMove"
-        onTouchEnd="touchEnd"
+        onTouchStart={touchStart}
+        onTouchMove={touchMove}
+        onTouchEnd={touchEnd}
         width={dimension.width}
         height={dimension.height}
       />
