@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { View, Input, navigateBack } from 'remax/alipay';
+import { View, Input } from 'remax/one';
+import { navigateBack } from '@/api';
 import AddButton from '@/components/AddButton';
 import { TodoContext } from '@/app';
 import './index.css';
@@ -11,9 +12,9 @@ export default () => {
   const handleAdd = () => {
     const items = todo.items.concat([
       {
-        id: Date.now(),
+        id: Date.now().toString(),
         text,
-        compeleted: false
+        completed: false
       }
     ]);
 
@@ -28,13 +29,18 @@ export default () => {
         <Input
           className="add-todo-input"
           placeholder="What needs to be done?"
-          onInput={e => setText(e.detail.value)}
+          onInput={e => {
+            setText(e.target.value);
+
+            return e.target.value;
+          }}
+          maxlength={140}
           value={text}
         />
       </View>
 
       <View className="todo-footer">
-        <AddButton text="Add Todo" onClick={handleAdd} />
+        <AddButton text="Add Todo" onTap={handleAdd} />
       </View>
     </View>
   );

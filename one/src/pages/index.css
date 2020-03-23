@@ -1,0 +1,62 @@
+page {
+  flex: 1;
+  display: flex;
+  font-family: 'pingFang SC' 'pingFang';
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.view {
+  padding: 50px 100px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+.hover {
+  background-color: powderblue;
+}
+
+.text {
+  padding: 50px 100px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+.image {
+  width: 200px;
+}
+
+.button {
+  width: 400px;
+}
+
+.checkbox-group {
+  margin-top: 400px;
+}
+
+.checkbox {
+  margin-bottom: 400px;
+}
+
+.radio-group {
+  margin-top: 400px;
+}
+
+.radio {
+  margin-bottom: 400px;
+}
+
+.label {
+  border: 1px solid black;
+}
+
+.input {
+  width: 350px;
+  border: 1px solid black;
+}
+
+.navigator {
+  width: 350px;
+  border: 1px solid black;
+}
