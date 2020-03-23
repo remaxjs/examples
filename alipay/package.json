@@ -20,5 +20,8 @@
     "remax": "^1.1.0",
     "remax-cli": "^1.1.0",
     "rimraf": "^2.6.3"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.1.0"
   }
 }
