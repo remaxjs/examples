@@ -15,8 +15,8 @@ export default function FormDemo() {
     <Form onReset={handleReset} onSubmit={handleSubmit}>
       <Input name="input" defaultValue="input" />
       <Textarea name="textarea" defaultValue="textarea" />
-      <Button formType="reset">reset</Button>
-      <Button formType="submit">submit</Button>
+      <Button type="reset">reset</Button>
+      <Button type="submit">submit</Button>
     </Form>
   );
 }
