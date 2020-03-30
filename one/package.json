@@ -5,12 +5,8 @@
   "author": "Caihuanyu <eterlf41@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:alipay": "cross-env TARGET=alipay NODE_ENV=production remax build -t alipay",
-    "dev:alipay": "cross-env TARGET=alipay remax build -w -t alipay",
-    "build:wechat": "cross-env TARGET=wechat NODE_ENV=production remax build -t wechat",
-    "dev:wechat": "cross-env TARGET=wechat remax build -w -t wechat",
-    "build:toutiao": "cross-env TARGET=toutiao NODE_ENV=production remax build -t toutiao",
-    "dev:toutiao": "cross-env TARGET=toutiao remax build -w -t toutiao"
+    "build": "cross-env NODE_ENV=production remax build -t",
+    "dev": "cross-env remax build -w -t"
   },
   "dependencies": {
     "clsx": "^1.1.0",
