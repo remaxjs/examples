@@ -15,7 +15,7 @@
   "dependencies": {
     "clsx": "^1.1.0",
     "react": "^16.13.1",
-    "remax": "^1.18.5-158541f8.0",
+    "remax": "^1.18.5-dcb70970.0",
     "remax-one": "^0.0.3-a50f5ad6.0"
   },
   "devDependencies": {
