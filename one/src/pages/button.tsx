@@ -16,7 +16,7 @@ export default function ButtonDemo() {
           color: 'purple'
         }}
         disabled={true}
-        hoverClass="hover"
+        hoverClassName="hover"
         hoverStartTime={1000}
         hoverStayTime={1000}
         onTap={handleTap}
@@ -27,7 +27,7 @@ export default function ButtonDemo() {
         wechat-type="warn"
         id="button2"
         className="button"
-        hoverClass="hover"
+        hoverClassName="hover"
         hoverStartTime={1000}
         hoverStayTime={1000}
         style={{
