@@ -5,15 +5,15 @@ import { AppConfig as ToutiaoAppConfig } from 'remax/toutiao';
 const pages = [
   'pages/index/index',
   'pages/new/index',
-  'pages/view',
-  'pages/text',
-  'pages/image',
-  'pages/button',
-  'pages/form',
-  'pages/input',
-  'pages/label',
-  'pages/textarea',
-  'pages/web-view'
+  'pages/view/index',
+  'pages/text/index',
+  'pages/image/index',
+  'pages/button/index',
+  'pages/form/index',
+  'pages/input/index',
+  'pages/label/index',
+  'pages/textarea/index',
+  'pages/web-view/index'
 ];
 
 export const wechat: WechatAppConfig = {
