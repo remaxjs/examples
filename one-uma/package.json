@@ -1,0 +1,32 @@
+{
+  "name": "remax-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Starter template for Remax apps",
+  "main": "index.js",
+  "keywords": [],
+  "author": "云猫🐈",
+  "license": "MIT",
+  "scripts": {
+    "dev:wx": "cross-env REMAX_PLATFORM=wechat remax build -w -t wechat",
+    "dev:my": "cross-env REMAX_PLATFORM=alipay remax build -w -t alipay",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build:wx": "cross-env REMAX_PLATFORM=wechat NODE_ENV=production remax build -t wechat",
+    "build:my": "cross-env REMAX_PLATFORM=alipay NODE_ENV=production remax build -t alipay"
+  },
+  "dependencies": {
+    "clsx": "^1.0.4",
+    "react": "^16.8.6",
+    "remax": "^1.19.2",
+    "remax-cli": "^1.19.2",
+    "rimraf": "^2.6.3",
+    "rollup-plugin-terser": "^5.3.0",
+    "umtrack-alipay": "^2.2.2",
+    "umtrack-wx": "^2.2.2"
+  },
+  "devDependencies": {
+    "chokidar": "^2.1.8",
+    "cross-env": "^7.0.2"
+  }
+}
