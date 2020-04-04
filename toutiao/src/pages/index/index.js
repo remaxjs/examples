@@ -21,7 +21,7 @@ export default () => {
     const checkedItems = e.detail.value;
     const items = todo.items.map(item => ({
       ...item,
-      completed: !!checkedItems.find(id => item.id == id),
+      completed: !!checkedItems.find(id => item.id === id),
     }));
 
     todo.setItems(items);
