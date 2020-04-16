@@ -4,6 +4,16 @@ import './index.css';
 
 export default function TextareaDemo() {
   const [value, setValue] = React.useState('1');
+  const [placeholderColor, setPlaceholderColor] = React.useState('red');
+
+  React.useEffect(() => {
+    setInterval(() => {
+      setPlaceholderColor((prevColor) =>
+        prevColor === 'red' ? 'blue' : 'red'
+      );
+    }, 2000);
+  }, []);
+
   const handleInput = (e: InputEvent) => {
     console.log(e);
 
@@ -31,7 +41,12 @@ export default function TextareaDemo() {
         defaultValue="默认值"
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
+        }}
+        autoHeight={true}
+        placeholder={value}
+        placeholderStyle={{
+          color: placeholderColor,
         }}
       />
       value:
@@ -42,17 +57,20 @@ export default function TextareaDemo() {
         onFocus={handleFocus}
         onBlur={handleBlur}
         onConfirm={handleConfirm}
-        maxlength={5}
+        maxLength={5}
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       />
       placeholder:
       <Textarea
         placeholder={value}
+        placeholderStyle={{
+          color: placeholderColor,
+        }}
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       />
       disabled:
@@ -61,7 +79,7 @@ export default function TextareaDemo() {
         disabled={true}
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       />
     </>

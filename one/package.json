@@ -11,12 +11,11 @@
   "dependencies": {
     "clsx": "^1.1.0",
     "react": "^16.13.1",
-    "remax": "^1.18.5-dcb70970.0",
-    "remax-one": "^0.0.3-a50f5ad6.0"
+    "react-dom": "^16.13.1",
+    "remax": "next"
   },
   "devDependencies": {
     "@types/react": "^16.9.23",
-    "cross-env": "^7.0.2",
-    "remax-cli": "^1.18.5-a50f5ad6.0"
+    "cross-env": "^7.0.2"
   }
 }

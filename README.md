@@ -1,11 +1,11 @@
 # Remax Todo Demo
 
-- [支付宝](#支付宝)
+- [阿里](#阿里)
 - [微信](#微信)
 - [头条](#头条)
 - [本地运行](#本地运行)
 
-## 支付宝
+## 阿里
 
 <img src="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*WDPmSo4iuoMAAAAAAAAAAABkARQnAQ" alt="QRCode" width="350"/>
 

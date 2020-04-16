@@ -22,7 +22,8 @@ const LoginButton = ({ login, children }: React.PropsWithChildren<Props>) => {
     <Button
       className="login-button"
       hoverClassName="none"
-      alipay-onTap={login}
+      ali-onTap={login}
+      web-onTap={login}
       toutiao-bindtap={handleTTLogin}
       wechat-open-type="getUserInfo"
       wechat-bindgetuserinfo={login}

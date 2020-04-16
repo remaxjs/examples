@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { View, Input } from 'remax/one';
-import { navigateBack } from '@/api';
+import { View, Input, navigateBack } from 'remax/one';
 import AddButton from '@/components/AddButton';
 import { TodoContext } from '@/app';
 import './index.css';
@@ -14,8 +13,8 @@ export default () => {
       {
         id: Date.now().toString(),
         text,
-        completed: false
-      }
+        completed: false,
+      },
     ]);
 
     todo.setItems(items);
@@ -29,12 +28,12 @@ export default () => {
         <Input
           className="add-todo-input"
           placeholder="What needs to be done?"
-          onInput={e => {
+          onInput={(e) => {
             setText(e.target.value);
 
             return e.target.value;
           }}
-          maxlength={140}
+          maxLength={140}
           value={text}
         />
       </View>

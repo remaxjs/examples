@@ -4,11 +4,11 @@ import './index.css';
 
 export default function ImageDemo() {
   function handleLoad(event: ImageLoadEvent) {
-    console.log(event);
+    console.log('onLoad', event);
   }
 
   function handleError(event: ImageErrorEvent) {
-    console.log(event);
+    console.log('onError', event);
   }
 
   function handleTap(event: TapEvent) {
@@ -39,17 +39,16 @@ export default function ImageDemo() {
         217,
         218,
         219,
-        220
-      ].map(width => (
+        220,
+      ].map((width) => (
         <Image
           key={width}
           className="image"
           mode="widthFix"
           src={`http://placekitten.com/${width}/300`}
           style={{
-            width
+            width,
           }}
-          lazyLoad={true}
           onLoad={handleLoad}
           onTap={handleTap}
         />

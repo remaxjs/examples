@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { requirePluginComponent } from 'remax/macro';
 import { useShow } from 'remax';
 import {
   View,
@@ -15,7 +16,10 @@ import AddButton from '@/components/AddButton';
 import LoginButton from '@/components/LoginButton';
 import { TodoContext } from '@/app';
 import logo from '@/assets/logo.png';
+import Badge from 'mini-antui/es/badge';
 import './index.css';
+
+// const PluginComponent = requirePluginComponent('plugin://xxx');
 
 export default () => {
   const [user, login] = useUserInfo();
@@ -37,6 +41,8 @@ export default () => {
 
   return (
     <View className="page-todos">
+      {/* <PluginComponent a="b" /> */}
+      <Badge />
       <View className="user">
         <LoginButton login={login}>
           <Image
