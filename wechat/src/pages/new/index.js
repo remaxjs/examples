@@ -13,7 +13,7 @@ export default () => {
       {
         id: Date.now(),
         text,
-        compeleted: false,
+        completed: false,
       },
     ]);
 
