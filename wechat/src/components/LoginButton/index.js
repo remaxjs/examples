@@ -6,7 +6,7 @@ const LoginButton = ({ login, children }) => {
   return (
     <Button
       className="login-button"
-      hoverClass="none"
+      hoverClassName="none"
       openType="getUserInfo"
       onGetUserInfo={login}
     >

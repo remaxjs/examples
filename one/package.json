@@ -6,13 +6,13 @@
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=production remax build -t",
-    "dev": "cross-env remax build -w -t"
+    "dev": "remax build -w -t"
   },
   "dependencies": {
     "clsx": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "remax": "next"
+    "remax": "2.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.23",

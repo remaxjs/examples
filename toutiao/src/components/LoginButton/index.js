@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {Button, login as ttLogin, getUserInfo} from 'remax/toutiao';
+import { Button, login as ttLogin, getUserInfo } from 'remax/toutiao';
 import './index.css';
 
-const LoginButton = ({login, children}) => {
+const LoginButton = ({ login, children }) => {
   const handleClick = async () => {
-    const {isLogin} = await ttLogin({force: true});
+    const { isLogin } = await ttLogin({ force: true });
     if (isLogin) {
       const res = await getUserInfo();
 
@@ -12,7 +12,11 @@ const LoginButton = ({login, children}) => {
     }
   };
   return (
-    <Button className="login-button" hoverClass="none" onClick={handleClick}>
+    <Button
+      className="login-button"
+      hoverClassName="none"
+      onClick={handleClick}
+    >
       {children}
     </Button>
   );

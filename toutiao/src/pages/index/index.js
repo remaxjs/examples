@@ -1,6 +1,13 @@
 import * as React from 'react';
-import { useShow } from 'remax';
-import { View, Image, CheckboxGroup, Checkbox, Label, Text, navigateTo } from 'remax/toutiao';
+import {
+  View,
+  Image,
+  CheckboxGroup,
+  Checkbox,
+  Label,
+  Text,
+  navigateTo,
+} from 'remax/toutiao';
 import clsx from 'clsx';
 import useUserInfo from '../../hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
@@ -17,11 +24,11 @@ export default () => {
     navigateTo({ url: '../new/index' });
   };
 
-  const handleComplete = e => {
+  const handleComplete = (e) => {
     const checkedItems = e.detail.value;
-    const items = todo.items.map(item => ({
+    const items = todo.items.map((item) => ({
       ...item,
-      completed: !!checkedItems.find(id => item.id == id),
+      completed: !!checkedItems.find((id) => item.id == id),
     }));
 
     todo.setItems(items);
@@ -41,7 +48,7 @@ export default () => {
 
       <View className="todo-items">
         <CheckboxGroup className="todo-items-group" onChange={handleComplete}>
-          {todo.items.map(item => (
+          {todo.items.map((item) => (
             <Label
               key={item.id}
               className={clsx('todo-item', {
