@@ -1,0 +1,24 @@
+{
+  "name": "remax-todo-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Wei Zhu <yesmeck@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -t wechat -w",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production remax build -t wechat"
+  },
+  "dependencies": {
+    "@vant/weapp": "^1.2.2",
+    "clsx": "^1.0.4",
+    "react": "^16.8.6",
+    "remax": "^1.7.0",
+    "remax-cli": "^1.7.0",
+    "rimraf": "^2.6.3"
+  }
+}
