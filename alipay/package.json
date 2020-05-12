@@ -8,17 +8,16 @@
   "author": "Wei Zhu <yesmeck@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "remax build -t alipay -w",
+    "dev": "remax build -t ali -w",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production remax build -t alipay"
+    "build": "cross-env NODE_ENV=production remax build -t ali"
   },
   "dependencies": {
     "clsx": "^1.0.4",
     "cross-env": "^6.0.3",
     "react": "^16.8.6",
-    "remax": "^1.1.0",
-    "remax-cli": "^1.1.0",
+    "remax": "^2.0.0",
     "rimraf": "^2.6.3"
   },
   "devDependencies": {

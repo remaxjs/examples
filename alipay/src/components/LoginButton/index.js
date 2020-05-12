@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from 'remax/alipay';
+import { Button } from 'remax/ali';
 import './index.css';
 
 const LoginButton = ({ login, children }) => {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Input, navigateBack } from 'remax/alipay';
+import { View, Input, navigateBack } from 'remax/ali';
 import AddButton from '@/components/AddButton';
 import { TodoContext } from '@/app';
 import './index.css';

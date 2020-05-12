@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Text } from 'remax/alipay';
+import { Button, Text } from 'remax/ali';
 import './index.css';
 
 const AddButton = ({ onClick, text }) => {

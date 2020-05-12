@@ -8,7 +8,7 @@ import {
   Label,
   Text,
   navigateTo
-} from 'remax/alipay';
+} from 'remax/ali';
 import clsx from 'clsx';
 import useUserInfo from '@/hooks/useUserInfo';
 import AddButton from '@/components/AddButton';

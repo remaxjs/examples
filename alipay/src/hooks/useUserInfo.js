@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getAuthCode, getAuthUserInfo } from 'remax/alipay';
+import { getAuthCode, getAuthUserInfo } from 'remax/ali';
 
 export default function useUserInfo() {
   const [userInfo, setUserInfo] = React.useState(null);
