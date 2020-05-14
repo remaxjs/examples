@@ -1,9 +1,9 @@
 {
-  "miniprogramRoot": "dist/alipay",
+  "miniprogramRoot": "dist/ali",
   "scripts": {
-    "beforeCompile": "npm run dev -- alipay",
-    "beforePreview": "npm run build -- alipay",
-    "beforeUpload": "npm run build -- alipay"
+    "beforeCompile": "npm run dev -- ali",
+    "beforePreview": "npm run build -- ali",
+    "beforeUpload": "npm run build -- ali"
   },
   "exclude": [
     "src/**",

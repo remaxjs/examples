@@ -4,8 +4,24 @@ import './index.css';
 
 export default function InputDemo() {
   const [value, setValue] = React.useState('1');
+  const [number, setNumber] = React.useState('1');
+  const [placeholderColor, setPlaceholderColor] = React.useState('red');
+
+  React.useEffect(() => {
+    setInterval(() => {
+      setPlaceholderColor((prevColor) =>
+        prevColor === 'red' ? 'blue' : 'red'
+      );
+    }, 2000);
+  }, []);
+
+  const handleNumberInput = (e: InputEvent) => {
+    setNumber(e.target.value);
+
+    return e.target.value;
+  };
   const handleInput = (e: InputEvent) => {
-    console.log(e);
+    console.log('onInput', e);
 
     setValue(e.target.value + 'v');
 
@@ -13,15 +29,15 @@ export default function InputDemo() {
   };
 
   const handleFocus = (e: InputEvent) => {
-    console.log(e);
+    console.log('onFocus', e);
   };
 
   const handleBlur = (e: InputEvent) => {
-    console.log(e);
+    console.log('onBlur', e);
   };
 
   const handleConfirm = (e: InputEvent) => {
-    console.log(e);
+    console.log('onConfirm', e);
   };
 
   return (
@@ -32,7 +48,20 @@ export default function InputDemo() {
         defaultValue="默认值"
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
+        }}
+      />
+      number:
+      <Input
+        type="number"
+        value={number}
+        className="input"
+        onInput={handleNumberInput}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onConfirm={handleConfirm}
+        style={{
+          color: 'purple',
         }}
       />
       value:
@@ -44,9 +73,9 @@ export default function InputDemo() {
         onFocus={handleFocus}
         onBlur={handleBlur}
         onConfirm={handleConfirm}
-        maxlength={5}
+        maxLength={5}
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       />
       placeholder:
@@ -55,7 +84,10 @@ export default function InputDemo() {
         placeholder={value}
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
+        }}
+        placeholderStyle={{
+          color: placeholderColor,
         }}
       />
       disabled:
@@ -65,7 +97,7 @@ export default function InputDemo() {
         disabled={true}
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       />
       password:
@@ -75,7 +107,7 @@ export default function InputDemo() {
         defaultValue={value}
         className="input"
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       />
     </>

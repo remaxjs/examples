@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { View, Image, Label, Text } from 'remax/one';
+import { View, Image, Label, Text, navigateTo } from 'remax/one';
 import clsx from 'clsx';
 import useUserInfo from '@/hooks/useUserInfo';
 import AddButton from '@/components/AddButton';
 import LoginButton from '@/components/LoginButton';
 import Checkbox from '@/components/Checkbox';
 import CheckboxGroup from '@/components/CheckboxGroup';
-import { navigateTo } from '@/api';
 import { TodoContext } from '@/app';
 import logo from '@/assets/logo.png';
 import './index.css';
@@ -16,14 +15,14 @@ export default () => {
   const todo = React.useContext(TodoContext);
 
   const handleAdd = () => {
-    navigateTo({ url: '../new/index' });
+    navigateTo({ url: '../new/index?a=1' });
   };
 
   const handleComplete = (event: any) => {
     const checkedItems = event.detail.value;
-    const items = todo.items.map(item => ({
+    const items = todo.items.map((item) => ({
       ...item,
-      completed: !!checkedItems.find((id: string) => item.id === id)
+      completed: !!checkedItems.find((id: string) => item.id === id),
     }));
 
     todo.setItems(items);
@@ -33,11 +32,7 @@ export default () => {
     <View className="page-todos">
       <View className="user">
         <LoginButton login={login}>
-          <Image
-            className="avatar"
-            src={user ? user.avatar : logo}
-            background-size="cover"
-          />
+          <Image className="avatar" src={user ? user.avatar : logo} />
         </LoginButton>
         <View className="nickname">
           {user ? user.nickName + "'s" : 'My'} Todo List
@@ -47,11 +42,11 @@ export default () => {
 
       <View className="todo-items">
         <CheckboxGroup className="todo-items-group" onChange={handleComplete}>
-          {todo.items.map(item => (
+          {todo.items.map((item) => (
             <Label
               key={item.id}
               className={clsx('todo-item', {
-                checked: item.completed
+                checked: item.completed,
               })}
             >
               <Checkbox

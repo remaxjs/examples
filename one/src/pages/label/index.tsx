@@ -6,10 +6,10 @@ export default function LabelDemo() {
   return (
     <Label
       id="label"
-      for="label"
+      htmlFor="label"
       className="label"
       style={{
-        color: 'purple'
+        color: 'purple',
       }}
     >
       label

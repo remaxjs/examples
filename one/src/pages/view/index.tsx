@@ -4,7 +4,7 @@ import {
   TouchStartEvent,
   TouchMoveEvent,
   TouchEndEvent,
-  TapEvent
+  TapEvent,
 } from 'remax/one';
 import { chooseImage } from '@/api';
 import './index.css';
@@ -12,23 +12,23 @@ import './index.css';
 export default function ViewDemo() {
   function handleTap(event: TapEvent) {
     chooseImage();
-    console.log(event);
+    console.log('onTap', event);
   }
 
   function handleTouchStart(event: TouchStartEvent) {
-    console.log(event);
+    console.log('onTouchStart', event);
   }
 
   function handleTouchMove(event: TouchMoveEvent) {
-    console.log(event);
+    console.log('onTouchMove', event);
   }
 
   function handleTouchEnd(event: TouchEndEvent) {
-    console.log(event);
+    console.log('onTouchEnd', event);
   }
 
   function handleLongTap(event: TapEvent) {
-    console.log(event);
+    console.log('onLongTap', event);
   }
 
   function alipayOnFirstAppear() {
@@ -54,7 +54,7 @@ export default function ViewDemo() {
       <View
         data-value="inner"
         style={{
-          color: 'purple'
+          color: 'purple',
         }}
       >
         view
