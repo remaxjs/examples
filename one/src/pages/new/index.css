@@ -1,9 +1,3 @@
-.page-add-todo {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
 .add-todo {
   padding: 40px;
   flex-grow: 1;

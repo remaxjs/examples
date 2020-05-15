@@ -23,7 +23,7 @@ export default () => {
   };
 
   return (
-    <View className="page-add-todo">
+    <View className="page">
       <View className="add-todo">
         <Input
           className="add-todo-input"

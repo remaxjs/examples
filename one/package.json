@@ -5,8 +5,9 @@
   "author": "Caihuanyu <eterlf41@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production remax build -t",
-    "dev": "remax build -w -t"
+    "start:remax": "remax build -w -t web",
+    "start:server": "node ./index.js",
+    "start": "concurrently \"npm run start:remax\" \"npm run start:server\""
   },
   "dependencies": {
     "clsx": "^1.1.0",
@@ -16,6 +17,8 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.23",
-    "cross-env": "^7.0.2"
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1"
   }
 }

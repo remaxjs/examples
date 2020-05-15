@@ -1,5 +1,8 @@
-page {
-  flex: 1;
+.page {
   display: flex;
+  flex-direction: column;
+  flex: 1;
   background-color: #323239;
+  height: 100vh;
+  width: 100%;
 }

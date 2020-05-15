@@ -15,7 +15,7 @@ export default () => {
   const todo = React.useContext(TodoContext);
 
   const handleAdd = () => {
-    navigateTo({ url: '../new/index?a=1' });
+    navigateTo({ url: '../new/index' });
   };
 
   const handleComplete = (event: any) => {
@@ -29,7 +29,7 @@ export default () => {
   };
 
   return (
-    <View className="page-todos">
+    <View className="page">
       <View className="user">
         <LoginButton login={login}>
           <Image className="avatar" src={user ? user.avatar : logo} />
