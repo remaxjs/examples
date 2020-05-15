@@ -7,7 +7,8 @@
   "scripts": {
     "start:remax": "remax build -w -t web",
     "start:server": "node ./index.js",
-    "start": "concurrently \"npm run start:remax\" \"npm run start:server\""
+    "start": "concurrently \"npm run start:remax\" \"npm run start:server\"",
+    "herbox": "herbox pub --id=remax-examples-todo --preCompiler=remax --prod"
   },
   "dependencies": {
     "clsx": "^1.1.0",
@@ -19,6 +20,7 @@
     "@types/react": "^16.9.23",
     "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }

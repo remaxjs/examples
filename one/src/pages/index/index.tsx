@@ -7,7 +7,6 @@ import LoginButton from '@/components/LoginButton';
 import Checkbox from '@/components/Checkbox';
 import CheckboxGroup from '@/components/CheckboxGroup';
 import { TodoContext } from '@/app';
-import logo from '@/assets/logo.png';
 import './index.css';
 
 export default () => {
@@ -32,7 +31,7 @@ export default () => {
     <View className="page">
       <View className="user">
         <LoginButton login={login}>
-          <Image className="avatar" src={user ? user.avatar : logo} />
+          <Image className="avatar" src={user ? user.avatar : 'https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*6ECQQKDLLykAAAAAAAAAAABkARQnAQ'} />
         </LoginButton>
         <View className="nickname">
           {user ? user.nickName + "'s" : 'My'} Todo List
