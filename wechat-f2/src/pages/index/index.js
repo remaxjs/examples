@@ -1,10 +1,6 @@
 import * as React from 'react';
-import {
-  Canvas,
-  getSystemInfoSync,
-  createSelectorQuery,
-  useReady
-} from 'remax/wechat';
+import { Canvas, getSystemInfoSync, createSelectorQuery } from 'remax/wechat';
+import { usePageEvent } from 'remax/macro';
 import F2 from '@antv/f2';
 import './index.css';
 
@@ -20,43 +16,35 @@ export default () => {
       { value: 67.7, city: 'Austin', date: '2011-10-02' },
       { value: 53.3, city: 'New York', date: '2011-10-03' },
       { value: 59.1, city: 'Alaska', date: '2011-10-03' },
-      { value: 69.4, city: 'Austin', date: '2011-10-03' }
+      { value: 69.4, city: 'Austin', date: '2011-10-03' },
     ];
     chart.source(data, {
       date: {
         range: [0, 1],
         type: 'timeCat',
-        mask: 'MM-DD'
+        mask: 'MM-DD',
       },
       value: {
         max: 300,
-        tickCount: 4
-      }
+        tickCount: 4,
+      },
     });
-    chart
-      .area()
-      .position('date*value')
-      .color('city')
-      .adjust('stack');
-    chart
-      .line()
-      .position('date*value')
-      .color('city')
-      .adjust('stack');
+    chart.area().position('date*value').color('city').adjust('stack');
+    chart.line().position('date*value').color('city').adjust('stack');
     chart.render();
     // 注意：需要把chart return 出来
     return chart;
   }
 
-  useReady(() => {
+  usePageEvent('onReady', () => {
     const canvasNode = createSelectorQuery().select('.f2-canvas');
 
     canvasNode
       .fields({
         node: true,
-        size: true
+        size: true,
       })
-      .exec(res => {
+      .exec((res) => {
         console.log(res);
         const { node, width, height } = res[0];
         const context = node.getContext('2d');

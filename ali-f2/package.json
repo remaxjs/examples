@@ -1,0 +1,22 @@
+{
+  "name": "remax-todo-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Wei Zhu <yesmeck@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -t ali -w",
+    "build": "cross-env NODE_ENV=production remax build -t ali"
+  },
+  "dependencies": {
+    "@antv/f2": "^3.4.2",
+    "@antv/my-f2": "^1.1.6",
+    "clsx": "^1.0.4",
+    "cross-env": "^6.0.3",
+    "react": "^16.8.6",
+    "remax": "^2.0.0"
+  }
+}

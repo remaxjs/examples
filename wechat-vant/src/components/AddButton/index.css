@@ -1,10 +1,9 @@
 .add-button {
   display: inline-block;
-  background: none;
+  background: #323239;
   color: #FFF;
   border: none;
   width: 300rpx;
-
 }
 
 .add-button::after {

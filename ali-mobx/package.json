@@ -1,0 +1,21 @@
+{
+  "name": "remax-todo-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Caihuanyu <eterlf41@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -t ali -w",
+    "build": "NODE_ENV=production remax build -t ali"
+  },
+  "dependencies": {
+    "clsx": "^1.0.4",
+    "mobx": "^5.14.2",
+    "mobx-react": "^6.1.4",
+    "react": "^16.8.6",
+    "remax": "^2.0.0"
+  }
+}

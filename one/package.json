@@ -5,18 +5,22 @@
   "author": "Caihuanyu <eterlf41@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production remax build -t",
-    "dev": "cross-env remax build -w -t"
+    "start:remax": "remax build -w -t web",
+    "start:server": "node ./index.js",
+    "start": "concurrently \"npm run start:remax\" \"npm run start:server\"",
+    "herbox": "herbox pub --id=remax-examples-todo --preCompiler=remax --prod"
   },
   "dependencies": {
     "clsx": "^1.1.0",
     "react": "^16.13.1",
-    "remax": "^1.18.5-dcb70970.0",
-    "remax-one": "^0.0.3-a50f5ad6.0"
+    "react-dom": "^16.13.1",
+    "remax": "2.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.23",
+    "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
-    "remax-cli": "^1.18.5-a50f5ad6.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   }
 }

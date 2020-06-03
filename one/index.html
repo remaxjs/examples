@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <link
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      *,
+      :after,
+      :before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #151515;
+      }
+      img {
+        vertical-align: middle;
+        border-style: none;
+      }
+      .demo-preview-wrapper {
+        margin: 0 auto;
+      }
+      .demo-preview-wrapper .demo-preview-header {
+        border-radius: 4px 4px 0 0;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(rgba(55, 55, 55, 0.98)),
+          to(#545456)
+        );
+        background: -webkit-linear-gradient(rgba(55, 55, 55, 0.98), #545456);
+        background: linear-gradient(rgba(55, 55, 55, 0.98), #545456);
+        text-align: center;
+      }
+      .demo-preview-wrapper .demo-preview-header .demo-preview-statbar {
+        height: 20px;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .demo-preview-wrapper .demo-preview-header .url-box {
+        width: 350px;
+        height: 28px;
+        line-height: 28px;
+        color: #fff;
+        background-color: #a2a2a2;
+        margin: 0 auto;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
+      .code-box-demo-preview {
+        position: relative;
+      }
+      #loading {
+        position: absolute;
+        background: #ffffff;
+        height: 548px;
+        width: 375px;
+        top: 0;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="aside-demo" class="aside-demo">
+        <div style="width: 375px; height: 620px;">
+          <div class="demo-preview-wrapper">
+            <div class="demo-preview-header">
+              <div class="demo-preview-statbar">
+                <img
+                  width="350Px"
+                  alt="presentation"
+                  src="https://os.alipayobjects.com/rmsportal/VfVHYcSUxreetec.png"
+                  style="margin: 0px 2px; line-height: 20px"
+                />
+              </div>
+              <div style="height: 40px;">
+                <div class="url-box">
+                  https://remaxjs.org
+                </div>
+              </div>
+            </div>
+            <section class="code-box-demo code-box-demo-preview">
+              <iframe
+                id="demoFrame"
+                name="demoFrame"
+                title="antd-mobile"
+                src="https://e4801-3000.sse.codesandbox.io/pages/index/index"
+                style="width: 375px; height: 548px; border: none;"
+              ></iframe>
+              <div id="loading">compiling...</div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var frame = document.getElementById("demoFrame");
+      frame.onload = function() {
+        document.getElementById("loading").style.display = "none";
+      };
+    </script>
+  </body>
+</html>
