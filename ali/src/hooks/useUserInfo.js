@@ -4,18 +4,17 @@ import { getAuthCode, getAuthUserInfo } from 'remax/ali';
 export default function useUserInfo() {
   const [userInfo, setUserInfo] = React.useState(null);
 
-  function login() {
-    getAuthCode({
+  const login = async () => {
+    const authcode = await getAuthCode({
       scopes: ['auth_user'],
-      success: (authcode) => {
-        getAuthUserInfo({
-          success: (res) => {
-            setUserInfo(res);
-          },
-        });
-      },
     });
-  }
+    const user = await getAuthUserInfo();
+    setUserInfo(user);
+  };
 
-  return [userInfo, login];
+  React.useEffect(() => {
+    login();
+  }, []);
+
+  return userInfo;
 }
