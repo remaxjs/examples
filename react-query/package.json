@@ -1,0 +1,23 @@
+{
+  "name": "react-query",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remax Project",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Meck Zhu <yesmeck@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -w -t",
+    "build": "cross-env NODE_ENV=production remax build -t"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-query": "^2.4.12",
+    "remax": "^2.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
