@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { ReactQueryCacheProvider, makeQueryCache } from 'react-query';
 import './app.css';
 
