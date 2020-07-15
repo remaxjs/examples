@@ -12,8 +12,8 @@
     "build": "cross-env NODE_ENV=production remax build -t ali"
   },
   "dependencies": {
-    "@antv/f2": "^3.4.2",
-    "@antv/my-f2": "^1.1.6",
+    "@antv/f2": "^3.7.0",
+    "@antv/f2-context": "^0.0.1",
     "clsx": "^1.0.4",
     "cross-env": "^6.0.3",
     "react": "^16.8.6",

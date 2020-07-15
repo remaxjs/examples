@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { useNativeEffect }  from 'remax';
 import { View, Canvas } from 'remax/ali';
-import F2 from '@antv/my-f2/dist/my-f2.min.js';
+import F2 from '@antv/f2';
+import { my as F2Context } from '@antv/f2-context';
 
 const chart = null;
 
-function drawChart(canvas, width, height) {
+function drawChart(config) {
   const data = [
     { country: 'USA', value: null, year: 1940 },
     { country: 'USA', value: null, year: 1941 },
@@ -163,11 +165,7 @@ function drawChart(canvas, width, height) {
     { country: 'USSR/Russia', value: 4500, year: 2016 },
     { country: 'USSR/Russia', value: 4500, year: 2017 },
   ];
-  const chart = new F2.Chart({
-    el: canvas,
-    width,
-    height,
-  });
+  const chart = new F2.Chart(config);
   chart.source(data);
   chart.scale('year', {
     tickCount: 5,
@@ -227,6 +225,7 @@ export default () => {
   const [dimension, setDimension] = React.useState({
     width: 0,
     height: 0,
+    pixelRatio: 0,
   });
 
   React.useEffect(() => {
@@ -237,35 +236,39 @@ export default () => {
         // 获取分辨率
         const pixelRatio = my.getSystemInfoSync().pixelRatio;
         // 获取画布实际宽高
-        const canvasWidth = res[0].width * pixelRatio;
-        const canvasHeight = res[0].height * pixelRatio;
+        const { width, height } = res[0];
         setDimension({
-          width: canvasWidth,
-          height: canvasHeight,
+          width: width,
+          height: height,
+          pixelRatio,
         });
-        const myCtx = my.createCanvasContext('area');
-        myCtx.scale(pixelRatio, pixelRatio); // 必要！按照设置的分辨率进行放大
-        const canvas = new F2.Renderer(myCtx);
-        canvasRef.current = canvas;
-        drawChart(canvas, canvasWidth, canvasHeight);
       });
   }, []);
 
+  useNativeEffect(() => {
+    if (dimension.width > 0) {
+      const myCtx = my.createCanvasContext('area');
+      const context = F2Context(myCtx);
+      const chart = drawChart({ context, ...dimension });
+      canvasRef.current = chart.get('el');
+    }
+  }, [dimension.width, dimension.height, dimension.pixelRatio]);
+
   const touchStart = (e) => {
     if (canvasRef.current) {
-      canvasRef.current.emitEvent('touchstart', [e]);
+      canvasRef.current.dispatchEvent('touchstart', [e]);
     }
   };
 
   const touchMove = (e) => {
     if (canvasRef.current) {
-      canvasRef.current.emitEvent('touchmove', [e]);
+      canvasRef.current.dispatchEvent('touchmove', [e]);
     }
   };
 
   const touchEnd = (e) => {
     if (canvasRef.current) {
-      canvasRef.current.emitEvent('touchend', [e]);
+      canvasRef.current.dispatchEvent('touchend', [e]);
     }
   };
 
@@ -277,8 +280,8 @@ export default () => {
         onTouchStart={touchStart}
         onTouchMove={touchMove}
         onTouchEnd={touchEnd}
-        width={dimension.width}
-        height={dimension.height}
+        width={dimension.width * dimension.pixelRatio}
+        height={dimension.height * dimension.pixelRatio}
       />
     </View>
   );
