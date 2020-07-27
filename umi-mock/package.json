@@ -1,0 +1,23 @@
+{
+  "name": "umi-mock",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remax Project",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Meck Zhu <yesmeck@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently 'remax build -t ali -w' 'umi dev'",
+    "build": "cross-env NODE_ENV=production remax build -t ali"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "remax": "^2.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "umi": "^3.2.11"
+  }
+}
