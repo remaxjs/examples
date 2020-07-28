@@ -1,0 +1,22 @@
+{
+  "name": "weui",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remax Project",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Meck Zhu <yesmeck@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -t wechat -w",
+    "build": "cross-env NODE_ENV=production remax build -t wechat"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "remax": "^2.6.0",
+    "weui-wxss": "^2.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
