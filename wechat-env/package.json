@@ -1,0 +1,18 @@
+{
+  "name": "remax-env-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "silent <huaentan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "APP_ENV=staging remax build -t wechat -w",
+    "build": "NODE_ENV=production remax build -t wechat"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "remax": "^2.8.2"
+  }
+}
