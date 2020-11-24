@@ -4,7 +4,18 @@ import { usePageEvent } from 'remax/macro';
 import F2 from '@antv/f2';
 import './index.css';
 
-export default () => {
+function wrapEvent(e: any) {
+  if (!e) return;
+  if (!e.preventDefault) {
+    e.preventDefault = function () {};
+  }
+  return e;
+}
+
+
+export default () => 
+  const canvasRef = React.useRef();
+  
   function onInitChart(F2, config) {
     const chart = new F2.Chart(config);
     const data = [
@@ -54,9 +65,34 @@ export default () => {
         node.height = height * pixelRatio;
 
         const config = { context, width, height, pixelRatio };
-        onInitChart(F2, config);
+        const chart = onInitChart(F2, config);
+        canvasRef.current = chart.get('el');
       });
   });
+  
+  function touchStart(e) {
+    const canvasEl = canvasRef.current;
+    if (!canvasEl) return;
+    canvasEl.dispatchEvent('touchstart', wrapEvent(e));
+  }
+  function touchMove(e) {
+    const canvasEl = canvasRef.current;
+    if (!canvasEl) return;
+    canvasEl.dispatchEvent('touchmove', wrapEvent(e));
+  }
+  function touchEnd(e) {
+    const canvasEl = canvasRef.current;
+    if (!canvasEl) return;
+    canvasEl.dispatchEvent('touchend', wrapEvent(e));
+  }
 
-  return <Canvas type="2d" className="f2-canvas" />;
+  return (
+    <Canvas 
+      type="2d" 
+      className="f2-canvas"
+      onTouchStart={touchStart}
+      onTouchMove={touchMove}
+      onTouchEnd={touchEnd}
+    />
+   );
 };
