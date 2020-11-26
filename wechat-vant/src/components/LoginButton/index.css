@@ -1,0 +1,12 @@
+.login-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
+
+}
+
+.login-button::after {
+  content: none;
+}
