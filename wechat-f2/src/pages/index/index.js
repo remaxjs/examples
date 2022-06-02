@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Canvas, getSystemInfoSync, createSelectorQuery } from 'remax/wechat';
-import { usePageEvent } from 'remax/macro';
 import F2 from '@antv/f2';
+import * as React from 'react';
+import { usePageEvent } from 'remax/macro';
+import { Canvas, createSelectorQuery, getSystemInfoSync } from 'remax/wechat';
 import './index.css';
 
-function wrapEvent(e: any) {
+function wrapEvent(e) {
   if (!e) return;
   if (!e.preventDefault) {
     e.preventDefault = function () {};
@@ -13,7 +13,7 @@ function wrapEvent(e: any) {
 }
 
 
-export default () => 
+export default () => {
   const canvasRef = React.useRef();
   
   function onInitChart(F2, config) {
